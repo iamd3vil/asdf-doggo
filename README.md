@@ -1,6 +1,6 @@
 <div align="center">
 
-# asdf-doggo [![Build](https://github.com/iamd3vil/asdf-doggo/actions/workflows/build.yml/badge.svg)](https://github.com/iamd3vil/asdf-doggo/actions/workflows/build.yml) [![Lint](https://github.com/iamd3vil/asdf-doggo/actions/workflows/lint.yml/badge.svg)](https://github.com/iamd3vil/asdf-doggo/actions/workflows/lint.yml)
+# asdf-doggo
 
 [doggo](https://github.com/mr-karan/doggo) plugin for the [asdf version manager](https://asdf-vm.com).
 
