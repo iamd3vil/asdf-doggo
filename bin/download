@@ -23,7 +23,7 @@ else
     arch="amd64"
 fi
 
-release_file="$ASDF_DOWNLOAD_PATH/${TOOL_NAME}_$ASDF_INSTALL_VERSION_$platform_$arch.tar.gz"
+release_file="$ASDF_DOWNLOAD_PATH/${TOOL_NAME}_${ASDF_INSTALL_VERSION}_${platform}_${arch}.tar.gz"
 
 # Download tar.gz file to the download directory
 download_release "$ASDF_INSTALL_VERSION" "$release_file"
