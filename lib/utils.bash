@@ -34,11 +34,24 @@ list_all_versions() {
 }
 
 download_release() {
+  local platform=""
+  [ "Linux" = "$(uname)" ] && platform="linux" || platform="darwin"
+
+  local arch="amd64"
+  local machine=$(uname -m)
+  if [[ $machine == "arm64" ]] || [[ $machine == "aarch64" ]]; then
+      arch="arm64"
+  elif [[ $machine == *"386"* ]]; then
+      arch="386"
+  else
+      arch="amd64"
+  fi
+
   local version filename url
   version="$1"
   filename="$2"
 
-  url="$GH_REPO/archive/v${version}.tar.gz"
+  url="${GH_REPO}/releases/download/v${ASDF_INSTALL_VERSION}/${TOOL_NAME}_${ASDF_INSTALL_VERSION}_${platform}_${arch}.tar.gz"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
