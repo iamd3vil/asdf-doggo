@@ -53,7 +53,7 @@ download_release() {
 
   url="${GH_REPO}/releases/download/v${ASDF_INSTALL_VERSION}/${TOOL_NAME}_${ASDF_INSTALL_VERSION}_${platform}_${arch}.tar.gz"
 
-  echo "* Downloading $TOOL_NAME release $version..."
+  echo "* Downloading $TOOL_NAME release $version from $url..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
 }
 
