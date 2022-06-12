@@ -10,10 +10,10 @@ source "${plugin_dir}/lib/utils.bash"
 
 mkdir -p "$ASDF_DOWNLOAD_PATH"
 
-platform = ""
+platform=""
 [ "Linux" = "$(uname)" ] && platform="linux" || platform="darwin"
 
-arch = "amd64"
+arch="amd64"
 machine=$(uname -m)
 if [[ $machine == "arm64" ]] || [[ $machine == "aarch64" ]]; then
     arch="arm64"
